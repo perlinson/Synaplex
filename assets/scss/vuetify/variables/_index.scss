@@ -1,0 +1,36 @@
+@use "sass:map";
+
+// 
+@use './_colors' as colors;
+@use './_global' as global;
+@use './_font' as font;
+@use './_elevations' as elevations;
+@use './_mixins' as mixins;
+@use './_utilities' as utilities;
+
+// 
+@forward './_colors';
+@forward './_global';
+@forward './_font';
+@forward './_elevations';
+@forward './_mixins';
+@forward './_utilities';
+
+// 
+$blue-grey: colors.$blue-grey !default;
+$grey: colors.$grey !default;
+$shades: colors.$shades !default;
+$colors: colors.$colors !default;
+
+$grid-breakpoints: global.$grid-breakpoints !default;
+$display-breakpoints: global.$display-breakpoints !default;
+
+// 
+@use './_light' as light;
+@use './_dark' as dark;
+
+@forward './_light';
+@forward './_dark';
+
+$material-light: light.$material-light !default;
+$material-dark: dark.$material-dark !default;
